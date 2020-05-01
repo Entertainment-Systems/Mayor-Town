@@ -405,31 +405,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &785599964 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4595906042054089762, guid: 9429b788c77d78943aeadc86562c9c92,
-    type: 3}
-  m_PrefabInstance: {fileID: 153961522}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &785599971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 785599964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d9adb0455f7b9143b717a221a047dbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  gravity: 20
-  onGround: 1
-  lockCursor: 1
-  deathMenuUI: {fileID: 0}
-  hintMenu: {fileID: 0}
-  deathCamera: {fileID: 0}
 --- !u!1 &1036435766
 GameObject:
   m_ObjectHideFlags: 0
