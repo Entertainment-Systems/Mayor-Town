@@ -1,37 +1,37 @@
 fileFormatVersion: 2
-guid: 3437cb254ad0f1e4d9a91d4afedafdd3
+guid: 09acd7a0ee1feef4799261b247efc41f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3338749442709606003
-    second: Coin_0
+      213: -926523626811212002
+    second: wavey_0
   - first:
-      213: 5848064539680731454
-    second: Coin_1
+      213: 2652600665693115685
+    second: wavey_1
   - first:
-      213: -2652133911391862278
-    second: Coin_2
+      213: -5187994833044760734
+    second: wavey_2
   - first:
-      213: 5522397121026081838
-    second: Coin_3
+      213: 7857084204631934169
+    second: wavey_3
   - first:
-      213: 4786861022352539597
-    second: Coin_4
+      213: 4537753989292124340
+    second: wavey_4
   - first:
-      213: 5728404248119495573
-    second: Coin_5
+      213: 1342577708032382067
+    second: wavey_5
   - first:
-      213: -205620266705300115
-    second: Coin_6
+      213: -2494443198320210159
+    second: wavey_6
   - first:
-      213: 914892611379245800
-    second: Coin_7
+      213: 1548048277787803967
+    second: wavey_7
   - first:
-      213: 3329141895401553498
-    second: Coin_8
+      213: -2554459649547318038
+    second: wavey_8
   - first:
-      213: 8372122516928991645
-    second: Coin_9
+      213: -4064379433673111858
+    second: wavey_9
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 256
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -116,70 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Coin_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 768
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d6db896f0e9ecf64bad41879fa131c79
-      internalID: -3338749442709606003
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Coin_1
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 768
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 345134f590354e847b6e2da9c216ae95
-      internalID: 5848064539680731454
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Coin_2
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 768
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d491f13765df8724099ed762be81745b
-      internalID: -2652133911391862278
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Coin_3
+      name: wavey_0
       rect:
         serializedVersion: 2
         x: 0
@@ -187,20 +124,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3705285a43be204c9ef7821a11823e7
-      internalID: 5522397121026081838
+      spriteID: 41a2231d9bc2ff74bb260233cecd6dc3
+      internalID: -926523626811212002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Coin_4
+      name: wavey_1
       rect:
         serializedVersion: 2
         x: 256
@@ -208,20 +145,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f2152e6b357d8443a10e61cd82cd1e4
-      internalID: 4786861022352539597
+      spriteID: 53b1f966434efc04eb41f18a6ed57305
+      internalID: 2652600665693115685
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Coin_5
+      name: wavey_2
       rect:
         serializedVersion: 2
         x: 512
@@ -229,20 +166,41 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d767b750bc44ca4fa245d8d2341271e
-      internalID: 5728404248119495573
+      spriteID: f7cc229f3c3687541ab1314eeaa8dd12
+      internalID: -5187994833044760734
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Coin_6
+      name: wavey_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd549188776d5dd4a8b81e295331da63
+      internalID: 7857084204631934169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wavey_4
       rect:
         serializedVersion: 2
         x: 0
@@ -250,20 +208,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0dd4a461c9500747a073be8bd1211e7
-      internalID: -205620266705300115
+      spriteID: cc30b01da4eeed442ae9a6741f94cc71
+      internalID: 4537753989292124340
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Coin_7
+      name: wavey_5
       rect:
         serializedVersion: 2
         x: 256
@@ -271,20 +229,20 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93719edc6fab5a54a90614f97b5aea1d
-      internalID: 914892611379245800
+      spriteID: 62eb8a65528fc2143b34656110bc2904
+      internalID: 1342577708032382067
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Coin_8
+      name: wavey_6
       rect:
         serializedVersion: 2
         x: 512
@@ -292,20 +250,41 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ddd7626b17b2f040bcb69a77f9e1252
-      internalID: 3329141895401553498
+      spriteID: c46e67f5569ca964abe5eb43d115def6
+      internalID: -2494443198320210159
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Coin_9
+      name: wavey_7
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9487a10ea51aa44a830d3de230f6dc3
+      internalID: 1548048277787803967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wavey_8
       rect:
         serializedVersion: 2
         x: 0
@@ -313,14 +292,35 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 691167c5b56a3de4496f4d1e97b60f70
-      internalID: 8372122516928991645
+      spriteID: 1adc7ef0fe9977245a421bdfbd281094
+      internalID: -2554459649547318038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wavey_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 046e807cffd15704ab55475f49a02447
+      internalID: -4064379433673111858
       vertices: []
       indices: 
       edges: []
@@ -328,7 +328,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 079b454e58f83db428986c515ff7caa0
     internalID: 0
     vertices: []
     indices: 
