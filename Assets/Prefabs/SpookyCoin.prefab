@@ -49,7 +49,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b7669c9b8d0f9184c9ce2e691cf6bb4c, type: 2}
+  - {fileID: 2100000, guid: 67956a8b6d49eea42b62018df4a257f3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 1689787455386099773}
   - component: {fileID: 230486763}
   m_Layer: 0
-  m_Name: Coin
+  m_Name: Coin 1
   m_TagString: collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 4912837868025595695}
   - component: {fileID: 4912837868025595693}
   - component: {fileID: 4912837868025595694}
+  - component: {fileID: 6166246922421604403}
   m_Layer: 0
   m_Name: Inspector
   m_TagString: Untagged
@@ -196,7 +197,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4912837868025595686}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b10382130c42c54881648c8fd11a06a, type: 3}
   m_Name: 
@@ -347,3 +348,18 @@ AudioEchoFilter:
   m_DecayRatio: 0.5
   m_WetMix: 1
   m_DryMix: 1
+--- !u!114 &6166246922421604403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4912837868025595686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae7ed22e7d11fea488158d8a00c06545, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolPoints: []
+  nextPoint: 0
+  destination: {fileID: 0}
