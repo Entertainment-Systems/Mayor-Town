@@ -10,6 +10,7 @@ public class characterController : MonoBehaviour
     CharacterController controller;
 
     public float speed = 10.0f;
+    float sprintFactor = 2;
 	private float jumpSpeed = 15;
     public float gravity = 20.0f;
    
@@ -22,12 +23,15 @@ public class characterController : MonoBehaviour
 	private float jumpTimer;
 	private bool hasPressedSpace;
     float verticalVelocity;
+    bool isSprinting;
 
     public static float health = 100f;
     
 	
     public bool lockCursor = true;
-	
+
+    int tempScore;
+
     Animator anim;
 	
     public GameObject deathMenuUI;
@@ -50,6 +54,8 @@ public class characterController : MonoBehaviour
 		anim = GetComponent<Animator>();
         Cursor.lockState = CursorLockMode.Locked;    
 		rigidBody = GetComponent<Rigidbody>();
+        isSprinting = false;
+        tempScore = 0;
     }
 
     void Update()
@@ -78,14 +84,16 @@ public class characterController : MonoBehaviour
             currentJump++;
         }
 
+        isSprinting = Input.GetKey(KeyCode.LeftShift) ? true : false;
+        
+
         //GO UP 
         moveDirection.y -= gravity * Time.deltaTime;
 
         //MOVE BITCH
         controller.Move(moveDirection * Time.deltaTime);
-
-        float translation = Input.GetAxis("Vertical") * speed;
-        float strafe = Input.GetAxis("Horizontal") * speed;
+        float translation = isSprinting ? Input.GetAxis("Vertical") * speed * sprintFactor : Input.GetAxis("Vertical") * speed;
+        float strafe = isSprinting ? Input.GetAxis("Horizontal") * speed * sprintFactor : Input.GetAxis("Horizontal") * speed;
         translation *= Time.deltaTime;
         strafe *= Time.deltaTime;
         transform.Translate(strafe, 0, translation);
@@ -93,19 +101,21 @@ public class characterController : MonoBehaviour
     }
 
     //----------------------------------CHECKS FOR COLLECTABLES-------------------------------------------
-	void OnCollisionEnter(Collision collider)
+	void OnTriggerEnter(Collider collider)
     {
 	
 		string tagOfTheOtherObject = collider.gameObject.tag;
-        if (collider.gameObject.tag == "ammo_gun" || tagOfTheOtherObject == "ammo_auto" || tagOfTheOtherObject == "ammo_grenade")
+        if (collider.gameObject.tag == "collectible")
         {
-		//	print("hit");
-            
+            tempScore++;
+            print("Score added! Current Score: " + tempScore);
+            Destroy(collider.gameObject);
         }
 	}
 
+
     //-----------------------------TAKE DAMAGE FUNCTION---------------------------------
-	public void TakeDamage (float amount)
+    public void TakeDamage (float amount)
 	{
 		
 		health -= amount;
