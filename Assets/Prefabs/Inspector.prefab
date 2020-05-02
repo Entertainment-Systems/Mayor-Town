@@ -360,6 +360,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae7ed22e7d11fea488158d8a00c06545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentState: 0
+  agent: {fileID: 0}
+  distanceFromTarget: 0
   patrolPoints: []
   nextPoint: 0
   destination: {fileID: 0}
