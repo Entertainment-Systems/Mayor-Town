@@ -17,6 +17,8 @@ public class AIMovement : MonoBehaviour
     public GameObject[] patrolPoints;
     public int nextPoint;
     public GameObject destination;
+    public bool changeable = true;
+    public int routeChangeBuffer;
 
 
     // Start is called before the first frame update
@@ -37,15 +39,32 @@ public class AIMovement : MonoBehaviour
         {
             case aiStates.patrolling:
                 destination = patrolPoints[nextPoint];
-                if (distanceFromTarget > 2)
-                {
-                    agent.SetDestination(destination.transform.position);
+                if (distanceFromTarget > 2) { break; }
+                else { 
+                    if (changeable == true) {
+                        StartCoroutine(patrolBuffer(routeChangeBuffer));
+                        if (nextPoint == patrolPoints.Length - 1)
+                        {
+                            nextPoint = 0;
+                        }
+                        else { nextPoint++; } 
+                    } 
                 }
-                else { if (nextPoint == 3) { nextPoint = 0; } else { nextPoint++; } }
                 break;
 
             case aiStates.chasing:
+                destination = GameObject.Find("Player");
                 break;
         }
+        agent.SetDestination(destination.transform.position);
+    }
+
+    IEnumerator patrolBuffer(int buffer)
+    {
+        changeable = false;
+        yield return new WaitForSecondsRealtime(buffer);
+        changeable = true;
+
     }
 }
+
