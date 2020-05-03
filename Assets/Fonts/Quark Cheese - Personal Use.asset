@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: Quark Cheese - Personal Use
   m_EditorClassIdentifier: 
-  hashCode: 0
+  hashCode: 2110854167
   material: {fileID: 9178511911979275155}
-  materialHashCode: 0
+  materialHashCode: 737372988
   m_Version: 1.1.0
   m_SourceFontFileGUID: 4999a8f97658c654ca4ae4ac8249ab04
   m_SourceFontFile_EditorRef: {fileID: 0}
