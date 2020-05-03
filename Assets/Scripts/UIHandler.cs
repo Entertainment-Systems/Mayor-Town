@@ -32,7 +32,7 @@ public class UIHandler : MonoBehaviour
     {
         if (paused)
         {
-            Cursor.visible = true;
+            //Cursor.visible = true;
             gameOverlay.SetActive(false);
             cc.lockCursor = false;
             //cc.enabled = false;
@@ -42,7 +42,7 @@ public class UIHandler : MonoBehaviour
         }
         else
         {
-            Time.timeScale = 1;
+            //Time.timeScale = 1;
             Cursor.visible = false;
             gameOverlay.SetActive(true);
             //cc.enabled = true;
