@@ -61,6 +61,9 @@ public class characterController : MonoBehaviour
 
     void Update()
     {
+        if (lockCursor) { Cursor.lockState = CursorLockMode.Locked; }
+        else { Cursor.lockState = CursorLockMode.None; }
+
         PlayerPrefs.SetInt("collected", tempScore);
 
         //YEAH THAT LOOKS LIKE AN UPDATE

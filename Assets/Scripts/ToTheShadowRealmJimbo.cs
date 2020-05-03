@@ -23,6 +23,8 @@ public class ToTheShadowRealmJimbo : MonoBehaviour
         pngPopUp.GetComponent<SpriteRenderer>().enabled = false;
         cameraAffect.GetComponent<PostProcessVolume>().enabled = false;
         print("waited");
+        GameManager.gameManager.setPlayerPos(transform.position);
+        GameManager.gameManager.setPlayerRot(transform.rotation);
         SceneManager.LoadScene("MayorTown");
     }
 
