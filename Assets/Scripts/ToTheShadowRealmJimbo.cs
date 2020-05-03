@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering.PostProcessing;
 
 public class ToTheShadowRealmJimbo : MonoBehaviour
 {
 
-    public GameObject spawn;
+    public GameObject pngPopUp;
+    public GameObject cameraAffect;
     private bool assending = false;
     
     private void Update() {
@@ -18,7 +20,8 @@ public class ToTheShadowRealmJimbo : MonoBehaviour
     IEnumerator Reset()
     {
         yield return new WaitForSeconds(2);
-
+        pngPopUp.GetComponent<SpriteRenderer>().enabled = false;
+        cameraAffect.GetComponent<PostProcessVolume>().enabled = false;
         print("waited");
         SceneManager.LoadScene("MayorTown");
     }
@@ -27,7 +30,8 @@ public class ToTheShadowRealmJimbo : MonoBehaviour
 
         if (other.gameObject.tag == "enemy") {
             print("waiting begon");
-            spawn.GetComponent<SpriteRenderer>().enabled = true;
+            pngPopUp.GetComponent<SpriteRenderer>().enabled = true;
+            cameraAffect.GetComponent<PostProcessVolume>().enabled = true;
             
             PlayerPrefs.SetInt("deaths", PlayerPrefs.GetInt("deaths")+1);
             StartCoroutine(Reset());
