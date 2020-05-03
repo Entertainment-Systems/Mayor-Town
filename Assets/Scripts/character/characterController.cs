@@ -57,6 +57,7 @@ public class characterController : MonoBehaviour
 		rigidBody = GetComponent<Rigidbody>();
         isSprinting = false;
         tempScore = 0;
+        PlayerPrefs.SetInt("collected", tempScore);
     }
 
     void Update()
@@ -64,7 +65,6 @@ public class characterController : MonoBehaviour
         if (lockCursor) { Cursor.lockState = CursorLockMode.Locked; }
         else { Cursor.lockState = CursorLockMode.None; }
 
-        PlayerPrefs.SetInt("collected", tempScore);
 
         //YEAH THAT LOOKS LIKE AN UPDATE
 
@@ -114,7 +114,13 @@ public class characterController : MonoBehaviour
         if (collider.gameObject.tag == "collectible")
         {
             tempScore++;
+            PlayerPrefs.SetInt("collected", tempScore);
             print("Score added! Current Score: " + tempScore);
+            if(tempScore > 8)
+            {
+                GameManager.gameManager.win();
+            }
+
             Destroy(collider.gameObject);
         }
 	}
