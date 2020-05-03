@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class UIHandler : MonoBehaviour
@@ -23,7 +24,7 @@ public class UIHandler : MonoBehaviour
     {
         scoreCounter.GetComponent<TextMeshProUGUI>().text = "(Score: " + PlayerPrefs.GetInt("collected") + ")";
 
-        if (Input.GetKeyDown(KeyCode.Escape)) { paused = !paused; }
+        if (Input.GetKeyDown(KeyCode.Escape)||Input.GetKeyDown(KeyCode.Q)) { paused = !paused; }
 
         pauseToggle();
     }
@@ -32,7 +33,7 @@ public class UIHandler : MonoBehaviour
     {
         if (paused)
         {
-            //Cursor.visible = true;
+            Cursor.visible = true;
             gameOverlay.SetActive(false);
             cc.lockCursor = false;
             //cc.enabled = false;
@@ -53,4 +54,9 @@ public class UIHandler : MonoBehaviour
     }
 
     public void resume() { paused = false; }
+
+    public void quit() {
+        SceneManager.LoadScene("main menu");
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName("main menu")); 
+    }
 }
