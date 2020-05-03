@@ -33,7 +33,7 @@ public class characterController : MonoBehaviour
     [SerializeField]
     int tempScore;
 
-    Animator anim;
+    public Animator anim;
 	
     public GameObject deathMenuUI;
     public GameObject hintMenu;
@@ -52,7 +52,7 @@ public class characterController : MonoBehaviour
     {
         //FINDS CHARACTER COMPONENTS
         controller = GetComponent<CharacterController>();
-		anim = GetComponent<Animator>();
+		//anim = GetComponent<Animator>();
         Cursor.lockState = CursorLockMode.Locked;    
 		rigidBody = GetComponent<Rigidbody>();
         isSprinting = false;
@@ -113,6 +113,7 @@ public class characterController : MonoBehaviour
 		string tagOfTheOtherObject = collider.gameObject.tag;
         if (collider.gameObject.tag == "collectible")
         {
+            StartCoroutine(pickAnimationTrigger());
             tempScore++;
             PlayerPrefs.SetInt("collected", tempScore);
             print("Score added! Current Score: " + tempScore);
@@ -124,6 +125,13 @@ public class characterController : MonoBehaviour
             Destroy(collider.gameObject);
         }
 	}
+
+    IEnumerator pickAnimationTrigger()
+    {
+        anim.SetBool("Pick", true);
+        yield return new WaitForSecondsRealtime(0.1f);
+        anim.SetBool("Pick", false);
+    }
 
 
     //-----------------------------TAKE DAMAGE FUNCTION---------------------------------
