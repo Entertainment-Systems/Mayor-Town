@@ -8,8 +8,8 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/MayorTown.unity
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/1f7deefb932feff4cae81a010d4b0156
     guid: 1f7deefb932feff4cae81a010d4b0156
   - enabled: 1
     path: Assets/Scenes/main menu.unity
@@ -17,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainLevel.unity
     guid: e9c09e929ccd1f547875b8e08162ef01
+  - enabled: 1
+    path: Assets/Scenes/MayorTown.unity
+    guid: de24ccb42b389154ca170426c114d8b7
+  - enabled: 1
+    path: Assets/Scenes/game over screen.unity
+    guid: 0c5d1a1a8b27a1d4eba4f606cc3ce9ac
+  - enabled: 1
+    path: Assets/Scenes/victory.unity
+    guid: 4d658775a2cefe7449d7221f55445210
   m_configObjects: {}
