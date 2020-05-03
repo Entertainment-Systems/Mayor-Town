@@ -15,6 +15,7 @@ public class ToTheShadowRealmJimbo : MonoBehaviour
         if(assending == true) {
           
         }
+
     }
 
     IEnumerator Reset()
@@ -52,9 +53,10 @@ public class ToTheShadowRealmJimbo : MonoBehaviour
         }
 
         if (other.gameObject.tag == "outofbounds") {
-            print("oops");
-            transform.position = new Vector3(162, 10000, 25);
+            SceneManager.LoadScene("game over screen");
+
+
         }
-        
+
     }
 }
