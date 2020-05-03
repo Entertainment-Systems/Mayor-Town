@@ -15,6 +15,7 @@ public class ToTheShadowRealmJimbo : MonoBehaviour
         if(assending == true) {
           
         }
+
     }
 
     IEnumerator Reset()
@@ -50,6 +51,12 @@ public class ToTheShadowRealmJimbo : MonoBehaviour
                 SceneManager.LoadScene("game over screen");
             }
         }
-        
+
+        if (other.gameObject.tag == "outofbounds") {
+            SceneManager.LoadScene("game over screen");
+
+
+        }
+
     }
 }
