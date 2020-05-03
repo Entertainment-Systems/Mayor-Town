@@ -7,10 +7,11 @@ public class VoiceLineAssigner : MonoBehaviour
     [SerializeField]
     AudioClip[] voiceLines;
     AudioSource audioSource;
-
+    int number;
     IEnumerator playVoiceLine()
     {
-        audioSource.clip = voiceLines[Random.Range(0, voiceLines.Length - 1)];
+        number = newVoiceLine(number);
+        audioSource.clip = voiceLines[number];
         audioSource.Play();
         yield return new WaitForSecondsRealtime(6);
         StartCoroutine(playVoiceLine());
@@ -22,6 +23,14 @@ public class VoiceLineAssigner : MonoBehaviour
         StartCoroutine(playVoiceLine());
     }
 
+    int newVoiceLine(int num)
+    {
+        int newnum = num;
+        
+        while(newnum == num) newnum = Random.Range(0, voiceLines.Length - 1);
+
+        return newnum;
+    }
 
 
 }
