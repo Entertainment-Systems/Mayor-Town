@@ -30,6 +30,7 @@ public class characterController : MonoBehaviour
 	
     public bool lockCursor = true;
 
+    [SerializeField]
     int tempScore;
 
     Animator anim;
@@ -60,6 +61,8 @@ public class characterController : MonoBehaviour
 
     void Update()
     {
+        PlayerPrefs.SetInt("collected", tempScore);
+
         //YEAH THAT LOOKS LIKE AN UPDATE
 
         //--------------------------------------------INPUT CHECKS-----------------------------------------------

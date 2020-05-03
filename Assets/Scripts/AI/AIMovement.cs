@@ -29,6 +29,7 @@ public class AIMovement : MonoBehaviour
     [Header("Scanner")]
     public int playerItemsFound;
     public int searchThreshold = 5;
+    public int chaseThreshhold = 10;
     public bool lookForPlayer = false;
     Ray playerFinder;
     RaycastHit playerFound;
@@ -48,7 +49,9 @@ public class AIMovement : MonoBehaviour
     void Update()
     {
         playerItemsFound = PlayerPrefs.GetInt("collected");
-        if(playerItemsFound >= searchThreshold) { lookForPlayer = true; }
+        
+        if (playerItemsFound >= searchThreshold) { lookForPlayer = true; }
+        if (playerItemsFound >= chaseThreshhold) { alwaysChase = true; lookForPlayer = false; }
 
         if (lookForPlayer) { scanForPlayer(); }
 
