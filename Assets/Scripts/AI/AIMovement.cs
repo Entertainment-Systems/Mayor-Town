@@ -33,11 +33,12 @@ public class AIMovement : MonoBehaviour
     public bool lookForPlayer = false;
     Ray playerFinder;
     RaycastHit playerFound;
-
+    private AudioDistortionFilter audioDistortionFilter;
 
     // Start is called before the first frame update
     void Start()
     {
+        audioDistortionFilter = GetComponent<AudioDistortionFilter>();
         agent = GetComponent<NavMeshAgent>();
         currentState = aiStates.patrolling;
         transform.position = points[0].transform.position;
@@ -80,6 +81,8 @@ public class AIMovement : MonoBehaviour
                 break;
         }
         agent.SetDestination(destination.transform.position);
+
+        audioDistortionFilter.distortionLevel = playerItemsFound/8f;
     }
 
     void scanForPlayer()
