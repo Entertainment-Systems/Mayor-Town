@@ -21,10 +21,10 @@ Material:
     m_TexEnvs:
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 4a45d71bdb1eba24d878661dd91eed9b, type: 3}
-        m_Scale: {x: 0.02, y: 0.02}
+        m_Scale: {x: -0.07, y: -0.06}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Glossiness: 0.5
-    - _Metallic: 0
+    - _Glossiness: 1
+    - _Metallic: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
