@@ -12,7 +12,7 @@ public class VoiceLineAssigner : MonoBehaviour
     {
         audioSource.clip = voiceLines[Random.Range(0, voiceLines.Length - 1)];
         audioSource.Play();
-        yield return new WaitForSecondsRealtime(5);
+        yield return new WaitForSecondsRealtime(6);
         StartCoroutine(playVoiceLine());
     }
 
