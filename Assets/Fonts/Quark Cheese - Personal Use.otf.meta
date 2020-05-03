@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 4999a8f97658c654ca4ae4ac8249ab04
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Quark Cheese - Personal Use
+  fontNames:
+  - Quark Cheese - Personal Use
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: e75b0d38b9ab9744493e085516b2644b, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
