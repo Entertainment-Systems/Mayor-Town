@@ -50,6 +50,11 @@ public class ToTheShadowRealmJimbo : MonoBehaviour
                 SceneManager.LoadScene("game over screen");
             }
         }
+
+        if (other.gameObject.tag == "outofbounds") {
+            print("oops");
+            transform.position = new Vector3(162, 10000, 25);
+        }
         
     }
 }
