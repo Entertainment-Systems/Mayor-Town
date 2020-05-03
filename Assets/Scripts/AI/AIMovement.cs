@@ -23,9 +23,14 @@ public class AIMovement : MonoBehaviour
     public int routeChangeBuffer;
 
     [Header("Chaser")]
-    
+    public bool seesPlayer;
+
 
     [Header("Scanner")]
+    public int playerItemsFound;
+    public int searchThreshold = 5;
+    public int chaseThreshhold = 10;
+    public bool lookForPlayer = false;
     Ray playerFinder;
     RaycastHit playerFound;
 
@@ -43,8 +48,14 @@ public class AIMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        toggleStateBools();
-        scanForPlayer();
+        playerItemsFound = PlayerPrefs.GetInt("collected");
+        
+        if (playerItemsFound >= searchThreshold) { lookForPlayer = true; }
+        if (playerItemsFound >= chaseThreshhold) { alwaysChase = true; lookForPlayer = false; }
+
+        if (lookForPlayer) { scanForPlayer(); }
+
+        determineState();
 
         distanceFromTarget = Vector3.Distance(destination.transform.position, transform.position);
         switch (currentState)
@@ -78,18 +89,21 @@ public class AIMovement : MonoBehaviour
         /*playerFound = new RaycastHit();
         Physics.Raycast(transform.position, agent.velocity, out playerFound);*/
 
-        
+        seesPlayer = Physics.Raycast(transform.position, agent.velocity, out playerFound, 10f);
+
         //if (playerFound.collider.gameObject.tag == "Player")
-        if (Physics.Raycast(transform.position, agent.velocity, out playerFound, 10f) && neverChase == false)
+        /*if (Physics.Raycast(transform.position, agent.velocity, out playerFound, 10f) && neverChase == false)
         {
             currentState = aiStates.chasing;
-        }
+        }*/
     }
 
-    void toggleStateBools()
+    void determineState()
     {
-        if (alwaysChase) { neverChase = false; }
-        if (neverChase) { alwaysChase = false; }
+        if(alwaysChase) { currentState = aiStates.chasing; }
+        else if(neverChase) { currentState = aiStates.patrolling; }
+        else if(seesPlayer) { currentState = aiStates.chasing; }
+        else { currentState = aiStates.patrolling; }
     }
 
     IEnumerator patrolBuffer(int buffer)
