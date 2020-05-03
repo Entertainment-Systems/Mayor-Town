@@ -80,7 +80,7 @@ public class AIMovement : MonoBehaviour
 
         
         //if (playerFound.collider.gameObject.tag == "Player")
-        if (Physics.Raycast(transform.position, agent.velocity, out playerFound, 10f))
+        if (Physics.Raycast(transform.position, agent.velocity, out playerFound, 10f) && neverChase == false)
         {
             currentState = aiStates.chasing;
         }
