@@ -8,6 +8,7 @@ public class MAINMENU : MonoBehaviour
     // Start is called before the first frame update
     public  void loadscene()
     {
+        PlayerPrefs.SetInt("deaths", 0);
         SceneManager.LoadScene("MainLevel");
     }
 }
