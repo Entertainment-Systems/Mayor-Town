@@ -6,7 +6,6 @@ TagManager:
   tags:
   - collectible
   - enemy
-  - outOfBounds
   layers:
   - Default
   - TransparentFX
