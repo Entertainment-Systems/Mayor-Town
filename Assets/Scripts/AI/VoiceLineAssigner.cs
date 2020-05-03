@@ -8,12 +8,25 @@ public class VoiceLineAssigner : MonoBehaviour
     AudioClip[] voiceLines;
     AudioSource audioSource;
     int number;
+    bool random;
+    [SerializeField]
+    int length;
+    [SerializeField]
+    bool definedLength;
     IEnumerator playVoiceLine()
     {
         number = newVoiceLine(number);
         audioSource.clip = voiceLines[number];
         audioSource.Play();
-        yield return new WaitForSecondsRealtime(6);
+        if (definedLength)
+        {
+            yield return new WaitForSecondsRealtime(length);
+
+        }
+        else
+        {
+            yield return new WaitForSecondsRealtime(Random.Range(6, 12));
+        }
         StartCoroutine(playVoiceLine());
     }
 

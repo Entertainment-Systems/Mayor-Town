@@ -13,7 +13,7 @@ public class ShadowRealmManager : MonoBehaviour
     void Start()
     {
         print(PlayerPrefs.GetInt("deaths"));
-        timerTillGoBack = PlayerPrefs.GetInt("deaths");
+        timerTillGoBack = PlayerPrefs.GetInt("deaths") * 10;
         player.transform.position = GameManager.gameManager.getPlayerPos();
         player.transform.rotation = GameManager.gameManager.getPlayerRot();
     }
@@ -25,7 +25,7 @@ public class ShadowRealmManager : MonoBehaviour
         {
             GameManager.gameManager.setPlayerPos(player.transform.position);
             GameManager.gameManager.setPlayerRot(player.transform.rotation);
-            SceneManager.LoadScene("PostProccessing");
+            SceneManager.LoadScene("MainLevel");
         }
     }
 }
