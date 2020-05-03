@@ -25,7 +25,7 @@ public class ToTheShadowRealmJimbo : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
 
-        if (other.gameObject.tag == "collectible") {
+        if (other.gameObject.tag == "enemy") {
             print("waiting begon");
             spawn.GetComponent<SpriteRenderer>().enabled = true;
             
