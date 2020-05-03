@@ -56,7 +56,7 @@ public class UIHandler : MonoBehaviour
     public void resume() { paused = false; }
 
     public void quit() {
-        SceneManager.LoadScene("main menu");
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName("main menu")); 
+        Application.Quit(0);
+        UnityEditor.EditorApplication.isPlaying = false;
     }
 }
