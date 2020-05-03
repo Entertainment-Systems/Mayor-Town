@@ -11,7 +11,7 @@ public class OverWorldManager : MonoBehaviour
     {
         print(GameManager.gameManager.getPlayerPos());
         print(GameManager.gameManager.getPlayerRot());
-
+        GameManager.gameManager.lose();
         player.transform.position = GameManager.gameManager.getPlayerPos();
         player.transform.rotation = GameManager.gameManager.getPlayerRot();
     }

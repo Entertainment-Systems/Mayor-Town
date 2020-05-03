@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager gameManager;
     private Vector3 playerPos = new Vector3(162,33,25);
     private Quaternion playerRot;
-
+    bool collectedAll = false;
 
     private void Awake()
     {
@@ -40,6 +40,21 @@ public class GameManager : MonoBehaviour
     public void setPlayerRot(Quaternion rot)
     {
         playerRot = rot;
+    }
+
+    public void win()
+    {
+        collectedAll = true;
+    }
+
+    public void lose()
+    {
+        collectedAll = false;
+    }
+
+    public bool hasWon()
+    {
+        return collectedAll;
     }
 
 }

@@ -39,5 +39,16 @@ public class ToTheShadowRealmJimbo : MonoBehaviour
             StartCoroutine(Reset());
         }
         
+        if (other.gameObject.tag == "mayor") {
+            if(GameManager.gameManager.hasWon())
+            {
+                SceneManager.LoadScene("victory");
+            }
+            else
+            {
+                SceneManager.LoadScene("game over screen");
+            }
+        }
+        
     }
 }
