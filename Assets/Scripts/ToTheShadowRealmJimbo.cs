@@ -46,6 +46,7 @@ public class ToTheShadowRealmJimbo : MonoBehaviour
             }
             else
             {
+                Cursor.lockState = CursorLockMode.None;
                 SceneManager.LoadScene("game over screen");
             }
         }
