@@ -35,7 +35,6 @@ public class ToTheShadowRealmJimbo : MonoBehaviour
             print("waiting begon");
             pngPopUp.GetComponent<SpriteRenderer>().enabled = true;
             cameraAffect.GetComponent<PostProcessVolume>().enabled = true;
-            
             PlayerPrefs.SetInt("deaths", PlayerPrefs.GetInt("deaths")+1);
             StartCoroutine(Reset());
         }

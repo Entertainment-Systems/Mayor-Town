@@ -8,11 +8,13 @@ public class GameManager : MonoBehaviour
     private Vector3 playerPos = new Vector3(162,33,25);
     private Quaternion playerRot;
     bool collectedAll = false;
+    internal bool teleported = false;
 
     private void Awake()
     {
         if(gameManager == null)
         {
+            PlayerPrefs.SetInt("deaths", 0);
             gameManager = this;
         }
         else if(this != gameManager)

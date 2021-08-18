@@ -82,7 +82,7 @@ public class AIMovement : MonoBehaviour
         }
         agent.SetDestination(destination.transform.position);
 
-        audioDistortionFilter.distortionLevel = playerItemsFound/8f;
+        audioDistortionFilter.distortionLevel = playerItemsFound/16f;
     }
 
     void scanForPlayer()

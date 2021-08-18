@@ -25,6 +25,7 @@ public class ShadowRealmManager : MonoBehaviour
         {
             GameManager.gameManager.setPlayerPos(player.transform.position);
             GameManager.gameManager.setPlayerRot(player.transform.rotation);
+            GameManager.gameManager.teleported = true;
             SceneManager.LoadScene("MainLevel");
         }
     }

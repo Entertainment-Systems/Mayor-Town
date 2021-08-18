@@ -9,6 +9,7 @@ public class MAINMENU : MonoBehaviour
     public  void loadscene()
     {
         PlayerPrefs.SetInt("deaths", 0);
+        GameManager.gameManager.teleported = false;
         SceneManager.LoadScene("MainLevel");
     }
 }
