@@ -15,8 +15,8 @@ public class UIHandler : MonoBehaviour
 
     void Start()
     {
-        cc = GameObject.Find("Player").GetComponent<characterController>();
-        cml = cc.gameObject.transform.GetChild(0).GetComponent<camMouseLook>();
+        //cc = GameObject.Find("Player").GetComponent<characterController>();
+        //cml = cc.gameObject.transform.GetChild(0).GetComponent<camMouseLook>();
     }
 
     // Update is called once per frame
