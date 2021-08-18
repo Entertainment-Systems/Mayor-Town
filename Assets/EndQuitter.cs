@@ -14,6 +14,6 @@ public class EndQuitter : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(42);
         Application.Quit(0);
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
     }
 }

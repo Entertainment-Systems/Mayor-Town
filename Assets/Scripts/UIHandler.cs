@@ -57,6 +57,6 @@ public class UIHandler : MonoBehaviour
 
     public void quit() {
         Application.Quit(0);
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
     }
 }
